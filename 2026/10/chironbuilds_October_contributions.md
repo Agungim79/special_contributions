@@ -15,6 +15,6 @@ A summary of security contributions by chironbuilds in October 2026:
 * Testing was performed locally only; no shared network was touched.
 * Coordinated the finding through private disclosure; the fix was applied by the Tari team in `tari-ootle#2761`. Technical details remain in the advisory until it is published. The contribution is tracked in `tari-project/special_contributions#56`.
 * Reported an `nfts.transfer` fee-payment and signing scope vulnerability in `tari-ootle`, submitted through GitHub Security Advisories and tracked in `GHSA-jg8h-hw4h-5fmv`.
-* * The report showed that `nfts.transfer` paid the transaction fee from, and signed with, an account the caller had no scope on.
-  * * Testing was performed locally only; no shared network was touched.
-    * * Coordinated the finding through private disclosure; the fix was applied by the Tari team in `tari-ootle#2785`. Technical details remain in the advisory until it is published. The contribution is tracked in `tari-project/special_contributions#71`.Page
+* The report showed that `nfts.transfer` paid the transaction fee from, and signed with, an account the caller had no scope on.
+* Testing was performed locally only; no shared network was touched.
+* Coordinated the finding through private disclosure; the fix was applied by the Tari team in `tari-ootle#2785`. Technical details remain in the advisory until it is published. The contribution is tracked in `tari-project/special_contributions#71`.
