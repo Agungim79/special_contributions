@@ -12,3 +12,7 @@ A summary of security contributions by Agungim79 in October 2026:
 * The fix was implemented by the Tari team in `tari-ootle#2742` and `tari-ootle#2740`. The contribution is tracked in `tari-project/special_contributions#46`.
 * Reported unmetered dry-run template compilation on the indexer's dry-run endpoint, submitted through GitHub Security Advisories and tracked in `GHSA-h5pq-gqp9-rp39`.
 * The fix was implemented by the Tari team in `tari-ootle#2744` and `tari-ootle#2745`. The contribution is tracked in `tari-project/special_contributions#48`.
+* Reported a flaw in `tari-ootle` walletd's `confidential.create_transfer_proof`, submitted through GitHub Security Advisories.
+* The report showed that the change output built by the handler omits `reveal_amount`, so the balance equation the engine verifies is off by exactly that amount and every reveal-based withdraw proof fails balance verification.
+* Provided root-cause analysis, a runnable in-repo proof of concept with zero-reveal and corrected-change controls, and measured impact. Testing was performed locally only; no shared network was touched.
+* Coordinated the finding through private disclosure; the fix will be implemented by the Tari team. The contribution is tracked in `tari-project/special_contributions#90`.
