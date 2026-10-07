@@ -9,3 +9,11 @@ A summary of security contributions by sands786 in October 2026:
 - Provided a passing proof-of-concept test, root cause analysis, and fix suggestion to the Tari team.
 
 - These contributions are tracked by `tari-project/special_contributions#83`.
+
+- Reported a wallet daemon denial-of-service vulnerability in `tari-ootle` through GitHub Security Advisories (`GHSA-g234-qrqg-35ch`).
+
+- The report demonstrated that a single 2 KB manifest with deeply nested parentheses causes the manifest parser to overflow its stack, aborting the entire walletd daemon process.
+
+- Provided a passing proof-of-concept test, root cause analysis, and fix suggestion to the Tari team.
+
+- These contributions are tracked by `tari-project/special_contributions#92`.
