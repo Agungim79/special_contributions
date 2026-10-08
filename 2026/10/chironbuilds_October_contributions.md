@@ -18,3 +18,7 @@ A summary of security contributions by chironbuilds in October 2026:
 * The report showed that `nfts.transfer` paid the transaction fee from, and signed with, an account the caller had no scope on.
 * Testing was performed locally only; no shared network was touched.
 * Coordinated the finding through private disclosure; the fix was applied by the Tari team in `tari-ootle#2785`. Technical details remain in the advisory until it is published. The contribution is tracked in `tari-project/special_contributions#71`.
+* Reported a transaction-finalization vulnerability in the `tari-ootle` wallet, submitted through GitHub Security Advisories and tracked in `GHSA-p5x5-x636-37pg`.
+* The report showed that the wallet applied an unverified finalization diff taken from a single committee member's first answer, letting one malicious validator mark real inputs spent, record phantom change, or release the locks of committed transactions.
+* Testing was performed locally only; no shared network was touched.
+* Coordinated the finding through private disclosure; the fix was applied by the Tari team in `tari-ootle#2838`. Technical details remain in the advisory until it is published. The contribution is tracked in `tari-project/special_contributions#108`.
