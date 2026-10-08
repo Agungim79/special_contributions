@@ -18,3 +18,7 @@ A summary of security contributions by chironbuilds in October 2026:
 * The report showed that `nfts.transfer` paid the transaction fee from, and signed with, an account the caller had no scope on.
 * Testing was performed locally only; no shared network was touched.
 * Coordinated the finding through private disclosure; the fix was applied by the Tari team in `tari-ootle#2785`. Technical details remain in the advisory until it is published. The contribution is tracked in `tari-project/special_contributions#71`.
+* Reported a fee-swap input vulnerability in the `tari-ootle` wallet, submitted through GitHub Security Advisories and tracked in `GHSA-mv6w-58hv-xv8r`.
+* The report showed that the wallet derived its fee-swap input from unverified indexer pool reserves with no cap or confirmation, so a lying indexer could make a fee swap sell the user's entire token balance into an attacker-owned pool.
+* Testing was performed locally only; no shared network was touched.
+* Coordinated the finding through private disclosure; the fix was applied by the Tari team in `tari-ootle#2837`. Technical details remain in the advisory until it is published. The contribution is tracked in `tari-project/special_contributions#105`.
