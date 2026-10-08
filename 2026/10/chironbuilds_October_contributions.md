@@ -18,3 +18,6 @@ A summary of security contributions by chironbuilds in October 2026:
 * The report showed that `nfts.transfer` paid the transaction fee from, and signed with, an account the caller had no scope on.
 * Testing was performed locally only; no shared network was touched.
 * Coordinated the finding through private disclosure; the fix was applied by the Tari team in `tari-ootle#2785`. Technical details remain in the advisory until it is published. The contribution is tracked in `tari-project/special_contributions#71`.
+* Reported a `claim_burn` vulnerability in `tari-ootle`, submitted through GitHub Security Advisories and tracked in `GHSA-j9v4-vq99-f484`.
+* The report showed that `claim_burn` minted the claimed UTXO to the seal signer's key, locking a relayer-sealed claim's funds behind the relayer.
+* Coordinated the finding through private disclosure; the fix was applied by the Tari team in `tari-ootle#2800`. Technical details remain in the advisory until it is published. The contribution is tracked in `tari-project/special_contributions#87`.
