@@ -32,3 +32,6 @@ A summary of security contributions by chironbuilds in October 2026:
 * Reported a timeout-certificate vulnerability in `tari-ootle`, submitted through GitHub Security Advisories and tracked in `GHSA-x75p-5xgq-26cv`.
 * The report showed that timeout certificates were accepted without checking their epoch, letting a Byzantine leader replay a stale quorum-signed timeout certificate to force an unauthorized view/height skip.
 * Coordinated the finding through private disclosure; the fix was applied by the Tari team in `tari-ootle#2835`. Technical details remain in the advisory until it is published. The contribution is tracked in `tari-project/special_contributions#125`.
+* Reported an account-vault-map denial-of-service vulnerability in `tari-ootle`, submitted through GitHub Security Advisories and tracked in `GHSA-rr6w-w4r5-9fcx`.
+* The report showed that unauthenticated dust deposits could permanently brick any builtin account and freeze its funds, because the allow-all deposit path grew an unremovable inline vault map until every mutating method ran out of memory inside the WASM limit.
+* Coordinated the finding through private disclosure; the fix was applied by the Tari team in `tari-ootle#2853`. Technical details remain in the advisory until it is published. The contribution is tracked in `tari-project/special_contributions#123`.

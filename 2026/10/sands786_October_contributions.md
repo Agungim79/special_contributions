@@ -17,3 +17,12 @@ A summary of security contributions by sands786 in October 2026:
 - Provided a passing proof-of-concept test, root cause analysis, and fix suggestion to the Tari team.
 
 - These contributions are tracked by `tari-project/special_contributions#92`.
+
+## [Bug Hunt] Unmetered template return value decoding bypasses compute budget (GHSA-wjvw-6j6r-x7q6)
+
+- **Severity:** Moderate (published)
+- **Package:** tari_engine <= 0.43.0
+- **CWE:** CWE-400
+- **Summary:** Template return values decoded via `IndexedValue::from_raw` outside the compute meter, allowing up to 128 KiB per return value to bypass the compute budget entirely.
+- **Fix:** tari-project/tari-ootle#2858
+- **Retro bounty issue:** tari-project/special_contributions#122
