@@ -26,3 +26,6 @@ A summary of security contributions by sands786 in October 2026:
 - **Summary:** Template return values decoded via `IndexedValue::from_raw` outside the compute meter, allowing up to 128 KiB per return value to bypass the compute budget entirely.
 - **Fix:** tari-project/tari-ootle#2858
 - **Retro bounty issue:** tari-project/special_contributions#122
+
+- Reported a template module name bypass of the std. topic reservation in `tari-ootle` through GitHub Security Advisories ( GHSA-gvgw-pg6g-fr2x ).
+- These contributions are tracked by tari-project/special_contributions#139.
