@@ -10,3 +10,7 @@ A summary of security contributions by makinokennn in October 2026:
 * The report showed that a template could call the on_panic host import repeatedly within a single invocation, each call writing the full guest-supplied message to the error log (twice for messages over 32 KiB) while only the call instruction itself was metered. It included a root-cause analysis, measurements, and suggested fixes.
 * Testing was performed locally only; no shared network was touched.
 * Coordinated the finding through private disclosure; the fix was applied by the Tari team in `tari-ootle#2884`. Technical details remain in the advisory. The contribution is tracked in `tari-project/special_contributions#141`.
+* Reported an unmetered host-side CBOR argument decode vulnerability in `tari-ootle`, submitted through GitHub Security Advisories and tracked in `GHSA-qp4q-p8m7-pmj9`.
+* The report showed that host-side CBOR argument decoding was not metered, letting a template burn validator CPU for free. It included a root-cause analysis, an executable proof of concept, and a suggested fix.
+* Testing was performed locally only; no shared network was touched.
+* Coordinated the finding through private disclosure; the fix was applied by the Tari team in `tari-ootle#2888`. Technical details remain in the advisory. The contribution is tracked in `tari-project/special_contributions#152`.
