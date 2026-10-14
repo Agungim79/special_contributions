@@ -13,6 +13,12 @@ A summary of security contributions by GSXRspartan in October 2026:
 * The report demonstrated that an unauthenticated peer could trigger an integer overflow through the `sync_state` `until_epoch` field, causing the validator process to abort.
 * The vulnerability was reproduced with a deterministic regression test against the affected Ootle source and was subsequently fixed separately by the Tari team in `tari-project/tari-ootle#2776`.
 
+* Reported a Tari Ootle state-sync transport vulnerability through GitHub Security Advisories (`GHSA-fcgg-6mg5-357x`).
+* The report demonstrated that valid committed state can exceed the state-sync RPC transport limit, making an affected shard permanently unsyncable for new or resynchronizing nodes.
+* Provided executable engine, RocksDB/state-sync, transport-boundary, and quorum analysis demonstrating the issue and its practical limits.
+* The vulnerability was responsibly disclosed and subsequently fixed separately by the Tari team in `tari-project/tari-ootle#2812`.
+* This contribution is tracked by `tari-project/special_contributions#95`.
+
 * All vulnerabilities were responsibly disclosed through GitHub Security Advisories, with reproduction evidence and technical analysis provided to the Tari team.
 * These contributions are tracked by `tari-project/special_contributions#40`, `tari-project/special_contributions#51`, and `tari-project/special_contributions#61`.
 
@@ -21,3 +27,8 @@ A summary of security contributions by GSXRspartan in October 2026:
 * Provided executable evidence covering the wallet/indexer trust boundary and non-refundable fee path.
 * The vulnerability was responsibly disclosed and subsequently fixed separately by the Tari team in `tari-project/tari-ootle#2803`.
 * This contribution is tracked by `tari-project/special_contributions#96`.
+* Reported a Tari Ootle validator availability vulnerability through GitHub Security Advisories (`GHSA-v8m9-4g8c-j2jf`).
+* The report demonstrated that a committee member could remotely abort a validator through a `NodeHeight` overflow in `LeaderSkipSet`.
+* Provided deterministic regression evidence showing the overflow reaches the release-build abort behavior under the affected conditions.
+* The vulnerability was responsibly disclosed and subsequently fixed separately by the Tari team in `tari-project/tari-ootle#2825`.
+* This contribution is tracked by `tari-project/special_contributions#100`.
