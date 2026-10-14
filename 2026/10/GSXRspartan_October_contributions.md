@@ -15,3 +15,9 @@ A summary of security contributions by GSXRspartan in October 2026:
 
 * All vulnerabilities were responsibly disclosed through GitHub Security Advisories, with reproduction evidence and technical analysis provided to the Tari team.
 * These contributions are tracked by `tari-project/special_contributions#40`, `tari-project/special_contributions#51`, and `tari-project/special_contributions#61`.
+
+* Reported a Tari Ootle validator availability vulnerability through GitHub Security Advisories (`GHSA-v8m9-4g8c-j2jf`).
+* The report demonstrated that a committee member could remotely abort a validator through a `NodeHeight` overflow in `LeaderSkipSet`.
+* Provided deterministic regression evidence showing the overflow reaches the release-build abort behavior under the affected conditions.
+* The vulnerability was responsibly disclosed and subsequently fixed separately by the Tari team in `tari-project/tari-ootle#2825`.
+* This contribution is tracked by `tari-project/special_contributions#100`.
