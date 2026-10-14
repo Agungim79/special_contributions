@@ -29,3 +29,8 @@ A summary of security contributions by sands786 in October 2026:
 
 - Reported a template module name bypass of the std. topic reservation in `tari-ootle` through GitHub Security Advisories ( GHSA-gvgw-pg6g-fr2x ).
 - These contributions are tracked by tari-project/special_contributions#139.
+
+- Reported an oversized foreign proposals vulnerability in `tari-ootle` through GitHub Security Advisories ( GHSA-27ch-g89f-mgx4 ).
+- The report showed that oversized foreign proposals silently stall the shard for the epoch.
+- These contributions are tracked by tari-project/special_contributions#149.
+
