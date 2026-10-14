@@ -38,3 +38,8 @@ A summary of security contributions by Agungim79 in October 2026:
 * Provided root-cause analysis, a local multi-peer harness reproducing the greylisting from validation rejects alone, a chain-divergence proof of concept, and measured impact. Testing was performed locally only; no shared network was touched.
 * The fix was implemented by the Tari team in `tari-ootle#2924`. The contribution is tracked in `tari-project/special_contributions#182`.
 
+* Reported a host-abort defect in `tari-ootle`'s SDK intent validation, submitted through private disclosure on 2026-10-05.
+* The report showed that a workspace label carrying an offset suffix is accepted by the SDK's label check but resolves through a second lookup that requires the bare name, so the builder panics; in the prebuilt release binaries the project ships to native hosts the panic aborts the process, and the caller never receives the error envelope the header promises.
+* Provided root-cause analysis across both lookups, a runnable end-to-end proof against the shipped release profile with a differential control, and measured impact (exit 134, 3/3). Testing was performed locally only; no shared network was touched.
+* The fix was implemented by the Tari team in `tari-ootle#2931`. The contribution is tracked in `tari-project/special_contributions#191`.
+
